@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .user-info {
+            position: relative;
+            left: 700px;
+        }
+
+        .dropdown-toggle {
+            position: relative;
+            left: 750x;
+        }
+
+        .ace-icon {
+            position: relative;
+            left: 600px;
+        }
+
+        .p1 
+        {
+                position: relative;
+            left: 600px;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shop Homepage - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/shop-homepage.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-9 col-xs-offset-3">
+                <div class="input-group">
+                    <div class="input-group-btn search-panel">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span id="search_concept">Filter by</span> <span class="caret"></span>
+                    </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#contains">High to Low</a></li>
+                            <li><a href="#its_equal">Low to High</a></li>
+                            <li><a href="#greather_than">Newest </a></li>
+                            <li><a href="#less_than">Top Rated  </a></li>
+                            <li><a href="#less_than">Best Seller  </a></li>
+                            <li class="divider"></li>
+                            <li><a href="#all">Anything</a></li>
+                        </ul>
+                    </div>
+                    <input type="hidden" name="search_param" value="all" id="search_param">
+                    <input type="text" class="form-control" name="x" placeholder="Search term...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://localhost:8888/">Smart Digital Market </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                    <li>
+                        <a href="http://localhost:8888/about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="http://localhost:8888/contact">Contact Us</a>
+                    </li>
+
+                    <div class="navbar-buttons navbar-header pull-right" role="navigation">
+                        <li class="light-blue dropdown-modal">
+                            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                <img class="user-info" src="../images/user.jpg" alt="Jason's Photo" />
+                                <span  id="username"  class="user-info">
+                              
+                                </span>
+
+                                <i class="ace-icon fa fa-caret-down"></i>
+                            </a>
+
+                            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                <li id='settings'>
+                                    <a href="http://localhost:8888/settings">
+                                        <i class="ace-icon fa fa-cog"></i>
+                                        Settings
+                                    </a>
+                                </li>
+
+                                <li id='profile'>
+                                    <a href="http://localhost:8888/profile">
+                                        <i class="ace-icon fa fa-user"></i>
+                                        Profile
+                                    </a>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li id ='loginbtn' onclick='logout()'>
+                                     <a onclick='logout()'>
+                                        <i class="ace-icon fa fa-user"></i>
+                                        Logout
+                                    </a>
+                                   
+                                </li>
+                            </ul>
+
+                        </li>
+                    </div>
+            </div>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">SDM Shop</p>
+                <div class="list-group">
+                    <a href="#" class="list-group-item">Electronics</a>
+                    <a href="#" class="list-group-item">Fashion</a>
+                    <a href="#" class="list-group-item">Home Appliances</a>
+                    <a href="#" class="list-group-item">Cosmetics</a>
+                    <a href="#" class="list-group-item">Others</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="../images/cover.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="../images/shoes.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="../images/clothes.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="../images/ele.jpg" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                       
+                </div>
+                        <div class="caption-full">
+                        <h4 id='price'class="pull-right">$24.99</h4>
+                        <h4><a id='name'href="#">Product Name</a>
+                        </h4>
+                        <p id='Desc'>See more snippets like these online store reviews at Bootsnipp - http://bootsnipp.com</a>.</p>
+
+                        <div class="ratings">
+                       
+                        <p>
+                            <span id='star1+' class="glyphicon glyphicon-star" ></span>
+                            <span id='star2+' class="glyphicon glyphicon-star" ></span>
+                            <span id='star3+' class="glyphicon glyphicon-star" ></span>
+                            <span id='star4+' class="glyphicon glyphicon-star" ></span>
+                            <span id='star5+' class="glyphicon glyphicon-star-empty" ></span>
+                            4.0 stars
+                        </p>
+                    </div>
+                    </div>
+                
+
+                             </br>
+                </br>
+                     <div class="ratings">
+                                <h4 style="color :#261414;"> Rate your product </h4>
+                        <p>
+                            <span id='star1' class="glyphicon glyphicon-star" onclick='onestar(1)'></span>
+                            <span id='star2' class="glyphicon glyphicon-star" onclick='onestar(2)'></span>
+                            <span id='star3' class="glyphicon glyphicon-star" onclick='onestar(3)'></span>
+                            <span id='star4' class="glyphicon glyphicon-star" onclick='onestar(4)'></span>
+                            <span id='star5' class="glyphicon glyphicon-star-empty" onclick='onestar(5)'></span>
+                          
+                        </p>
+                    </div>
+                </div>
+
+              
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        
+
+        <!-- Footer -->
+        <footer>
+            <hr>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; SDM 2017</p>
+                </div>
+            </div>
+       
+        </footer>
+
+    </div>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+   <!-- ***************************************************copy******************************************************8 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <script>
+        var home = "https://smartboard.eu-gb.mybluemix.net/";
+
+        var socket = io();
+
+        var username = '';
+        var email;
+        socket.emit('getusername');
+        socket.on('username', function(data) {
+            if (data.name) {
+                document.getElementById('username').innerHTML = 'Welcome, ' + data.name;
+                console.log(data);
+                username = data.Name;
+                email = data.Email;
+            } else {
+                console.log(data);
+                document.getElementById('loginbtn').innerHTML = '<a onclick="logout()"><i class="ace-icon fa fa-user"></i> Login </a>';
+                document.getElementById('profile').innerHTML="";
+                document.getElementById('settings').innerHTML="";
+
+
+            }
+        });
+     
+        function logout() {
+            if (username == '') {
+                window.location = 'http://localhost:8888/login';
+            } else {
+                socket.emit('logout');
+                window.location = 'http://localhost:8888';
+
+            }
+        }
+
+        var url = window.location.href;
+var i = url.indexOf("/product/")+9;
+console.log(url);
+var x = url.length-1;
+if(url.indexOf('/', i)!=-1)
+x = url.indexOf('/', i);
+var id = parseInt(url.substring(i, x+1));
+console.log(id);
+    socket.emit('getProduct', id);
+    socket.on('recProduct', function(data){
+        if(data){
+                    document.getElementById('name').innerHTML = data.Name;
+                    document.getElementById('price').innerHTML = '$'+data.Price;
+                    console.log(data.Photo);
+                    document.getElementById('productimg').setAttribute('src', data.Photo);
+                    document.getElementById('Desc').innerHTML = data.Description;
+        }
+
+    });
+    function onestar(id){
+          for(var i=1; i<=id; i++){
+                document.getElementById('star'+i).setAttribute('class', "glyphicon glyphicon-star");
+          }
+          for(var i=id+1; i<=5; i++){
+                document.getElementById('star'+i).setAttribute('class', "glyphicon glyphicon-star-empty");
+          }
+            }
+    
+    </script>
+     <!-- ***************************************************copy******************************************************8 -->
+ 
+</body>
+
+</html>
